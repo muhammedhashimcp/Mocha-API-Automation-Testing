@@ -1,0 +1,3 @@
+[submodule "JavaScript-API-Automation-Tests"]
+	path = JavaScript-API-Automation-Tests
+	url = https://github.com/automationbro/JavaScript-API-Automation-Tests.git
