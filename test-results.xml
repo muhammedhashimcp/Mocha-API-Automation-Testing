@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.321" tests="11" failures="5">
+  <testsuite name="Root Suite" timestamp="2023-03-03T13:45:11" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Posts" timestamp="2023-03-03T13:45:11" tests="0" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/posts.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2023-03-03T13:45:13" tests="2" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/posts.js" time="0.565" failures="2">
+    <testcase name="Posts POST /posts" time="0.548" classname="/posts">
+      <failure message="expected [ { field: &apos;body&apos;, …(1) } ] to deep include { user_id: 769950, …(2) }" type="AssertionError"><![CDATA[AssertionError: expected [ { field: 'body', …(1) } ] to deep include { user_id: 769950, …(2) }
+    at _callee2$ (test/posts.js:41:37)
+    at tryCatch (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:44:17)
+    at Generator.<anonymous> (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:125:22)
+    at Generator.next (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:69:21)
+    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    </testcase>
+    <testcase name="Posts POST posts/:id" time="0.000" classname="posts/:id">
+      <failure message="postId is invalid - undefined" type="Error"><![CDATA[Error: postId is invalid - undefined
+    at _callee3$ (test/posts.js:53:15)
+    at tryCatch (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:44:17)
+    at Generator.<anonymous> (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:125:22)
+    at Generator.next (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:69:21)
+    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /home/hashimcp/WEBSITES/Testing/super-api-tests/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Context.<anonymous> (node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at processImmediate (node:internal/timers:476:21)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Negative Tests" timestamp="2023-03-03T13:45:13" tests="2" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/posts.js" time="1.954" failures="0">
+    <testcase name="Posts Negative Tests 422 Data validation failed" time="1.405" classname="422 Data validation failed">
+    </testcase>
+    <testcase name="Posts Negative Tests 401 Authentication failed" time="0.548" classname="401 Authentication failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2023-03-03T13:45:15" tests="0" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2023-03-03T13:45:15" tests="1" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js" time="1.152" failures="0">
+    <testcase name="Users POST /users" time="1.151" classname="/users">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET" timestamp="2023-03-03T13:45:16" tests="3" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js" time="1.438" failures="1">
+    <testcase name="Users GET /users" time="0.428" classname="/users">
+    </testcase>
+    <testcase name="Users GET /users/:id" time="0.558" classname="/users/:id">
+    </testcase>
+    <testcase name="Users GET /users with query params" time="0.446" classname="/users with query params">
+      <failure message="expected [] not to be empty" type="AssertionError"><![CDATA[AssertionError: expected [] not to be empty
+    at /home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js:54:40
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="PUT" timestamp="2023-03-03T13:45:18" tests="1" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js" time="0.783" failures="1">
+    <testcase name="Users PUT /users/:id" time="0.777" classname="/users/:id">
+      <failure message="expected { name: &apos;Luffy - 6544&apos;, …(4) } to have deep property &apos;status&apos; of &apos;Active&apos;, but got &apos;active&apos;" type="AssertionError"><![CDATA[AssertionError: expected { name: 'Luffy - 6544', …(4) } to have deep property 'status' of 'Active', but got 'active'
+    at /home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      + expected - actual
+
+      -active
+      +Active
+      ]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE" timestamp="2023-03-03T13:45:19" tests="1" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users-advanced.js" time="0.404" failures="0">
+    <testcase name="Users DELETE /users/:id" time="0.403" classname="/users/:id">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2023-03-03T13:45:19" tests="1" file="/home/hashimcp/WEBSITES/Testing/super-api-tests/test/users.js" time="0.419" failures="1">
+    <testcase name="Users GET /users/:id" time="0.410" classname="GET /users/:id">
+      <failure message="expected undefined to equal 1" type="AssertionError"><![CDATA[AssertionError: expected undefined to equal 1
+    at /home/hashimcp/WEBSITES/Testing/super-api-tests/test/users.js:20:35
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+      + expected - actual:  failed to generate Mocha diff
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
